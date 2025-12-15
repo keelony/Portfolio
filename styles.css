@@ -121,7 +121,7 @@ a {
 
 .contacts h2 {
   font-size: 1.5rem;
-  margin-bottom: 5px;
+  margin-bottom: 21px;
 }
 
 .reco h2 {
@@ -194,20 +194,6 @@ a {
   color: #e6007e;
 }
 
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 0.9rem;
-}
-
-.copyright {
-  margin: 0;
-}
-
 .mentions {
   text-decoration: none;
   color: #541507;
@@ -220,8 +206,11 @@ a {
 }
 
 #footer {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 220px;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .description {
@@ -260,6 +249,10 @@ a {
   font-size: 1.1rem;
 }
 
+footer a {
+  margin: 0 10px 0 10px;
+}
+
 
 
 
@@ -281,9 +274,6 @@ a {
 }
 
 #footer.section {
-  margin-top: 3em;
-  padding-top: 0.5em;
-  padding-bottom: 3em;
   background-color: #FBD6E1;
 }
 
@@ -375,25 +365,6 @@ a {
   box-shadow: 15px 15px 0px #541507;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-}
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 #recommandations {
   text-align: center;
@@ -548,16 +519,6 @@ a {
   border-radius: 50%;
 }
 
-.petitslogosFooter {
-  width: auto;
-  height: 20px;
-}
-
-.logo-footer img {
-  width: 180px;
-  height: auto;
-}
-
 .logoscrea,
 .logosdev {
   display: flex;
@@ -603,8 +564,6 @@ a {
   justify-content: space-around;
   margin-top: 50px;
 }
-
-
 
 .galerie img {
   width: 309px;
@@ -667,10 +626,6 @@ a {
     padding: 40px 20px;
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 40px;
-  }
 
   .contacts {
     align-items: center;
