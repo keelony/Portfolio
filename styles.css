@@ -102,7 +102,7 @@ h1 {
 }
 
 h2 {
-  margin: 70px 0 45px 0;
+  margin: 90px 0 45px 0;
   font-weight: 800;
   color: #541507;
 }
@@ -158,6 +158,23 @@ a {
   margin-bottom: 30px;
 }
 
+.logo-item span {
+  position: absolute;
+  bottom: -45px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #541507;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.logo-item:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .projet p {
   font-size: 0.9rem;
   line-height: 1.4;
@@ -186,6 +203,7 @@ a {
 .contacts img {
   width: 300px;
   height: auto;
+  transform: rotate(-2deg);
 }
 
 .contact-item {
@@ -195,7 +213,7 @@ a {
 }
 
 .contact-item a {
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: #541507;
   font-weight: 500;
   font-size: 1rem;
@@ -308,7 +326,8 @@ footer a {
   width: 493px;
   max-width: 100%;
   height: auto;
-  transform: rotate(-2deg);  /*border: 2px solid #541507;
+  transform: rotate(-2deg);
+  /*border: 2px solid #541507;
   border-radius: 15px;
   box-shadow: 10px 10px 0px #541507;*/
   /* ombre noire (que j'ai changé en marron */
@@ -405,7 +424,7 @@ footer a {
 }
 
 
-.textebas {
+/*.textebas {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,21 +443,31 @@ footer a {
 }
 
 .textebas a:hover {
-  color: rgb(255, 244, 244);
-}
+  color: #ffffff;
+}*/
 
-.voirleprojet {
+/*.voirleprojet {
   font-weight: 700;
   margin-top: 10px;
-  border-radius: 12px;
-  width: 161px;
-  height: 36px;
+  border-radius: 20px;
+  width: 180px;
+  height: 50px;
   color: #FDB4BC;
   background-color: #541507;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-left: 21px;
   padding-right: 21px;
+  box-shadow: 0px 5px 5px rgba(66, 66, 66, 0.516);
+
 }
+.voirleprojet:hover {
+  font-weight: 700;
+  box-shadow: 0px 5px 5px rgba(66, 66, 66, 0.882);
+  transition: color 0.3s ease;
+}*/
+
+
+
 
 
 
@@ -470,7 +499,7 @@ footer a {
 }
 
 .popup p {
-  margin-bottom: 35px;
+  margin-bottom: 100px;
 }
 
 .popup h2 {
@@ -495,9 +524,9 @@ footer a {
   transition: color 0.3s ease;
 }
 
-.popup a:hover {
-  color: rgb(255, 244, 244);
-}
+/*.popup a:hover {
+  color: #541507
+}*/
 
 .popup::-webkit-scrollbar {
   width: 13px;
@@ -520,10 +549,104 @@ footer a {
 }
 
 
+/* --- ZONE INFOS PROJET + CARTES + PICTOS --- */
+
+.zone-infos-projet {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* cartes alignées en haut */
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+
+/* carte rose texte */
+.carte-info {
+  background-color: #ffbcd05b;
+  border-radius: 40px;
+  padding: 25px 35px;
+  min-width: 230px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 5px rgba(72, 0, 29, 0.362);
+}
+
+/* conteneur bouton "Voir le projet" */
+.carte-bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* titre à l'intérieur des cartes */
+.titre-carte {
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+/* paragraphes des cartes */
+.carte-info p {
+  margin: 0;
+}
+
+/* bouton "Voir le projet" */
+.btn-projet {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background-color: #FF808D;
+  color: #541507;
+  font-weight: 700;
+  box-shadow: 0 5px 5px rgba(72, 0, 29, 0.362);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-projet:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.24);
+}
+
+/*.pictos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+  margin-top: 40px;
+}
+
+.pictos img {
+  width: 38px;
+  height: auto;
+}*/
+
+
+
 
 
 
 /* logos et images */
+
+.logo-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-item img {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+  transform: scale(1.1);
+}
+
+
 .logo-grand {
   display: flex;
   justify-content: center;
@@ -591,7 +714,7 @@ footer a {
 }
 
 footer img {
-width: 300px;
+  width: 300px;
 }
 
 
@@ -619,8 +742,10 @@ width: 300px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #FBD6E1; /* rose */
-  color: #541507;            /* marron */
+  background-color: #FBD6E1;
+  /* rose */
+  color: #541507;
+  /* marron */
   font-size: 32px;
   border: none;
   cursor: pointer;
@@ -758,7 +883,7 @@ width: 300px;
     height: auto;
   }
 
-  .textebas {
+  /*.textebas {
     flex-direction: column;
     gap: 15px;
   }
@@ -767,7 +892,7 @@ width: 300px;
     width: 100%;
     height: auto;
     text-align: center;
-  }
+  }*/
 
   #recommandations {
     margin: 60px 20px;
