@@ -10,6 +10,15 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Kalufira';
+  src: url('../polices/kalufira/Kalufira.otf') format('opentype'),
+       url('../polices/kalufira/Kalufira.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 
@@ -140,7 +149,11 @@ a {
 .reco h3 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+.reco p {
+  margin-top: 5px;
 }
 
 .apropos a {
