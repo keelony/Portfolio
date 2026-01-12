@@ -240,7 +240,7 @@ a {
   /*text-decoration: none;*/
   color: #541507;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
@@ -409,9 +409,10 @@ footer a {
 .liste-projets {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 30px;
+  gap: 80px 100px;
   justify-items: center;
 }
+
 /*
 .liste-projets .projet {
   gap: 0 100px;
@@ -425,8 +426,8 @@ footer a {
 
 .projet .carte {
   /*background-color: rgb(255, 244, 244);*/
-  width: 400px;
-  height: 300px;
+  width: 345px;
+  height: 255px;
   border: 1px solid rgb(14, 0, 0);
   border-radius: 15px;
   box-shadow: 10px 10px 0px #541507;
@@ -436,8 +437,8 @@ footer a {
 }
 
 .carte img {
-  width: 400px;
-  height: 300px;
+  width: 345px;
+  height: 255px;
   border-radius: 15px;
   object-fit: cover;
 }
