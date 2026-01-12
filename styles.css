@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   padding-top: 100px;
   background-color: #f6aac03d;
+  background-color: #fff6f8;
   margin: 0;
 }
 
@@ -120,7 +121,7 @@ h1 {
 }
 
 h2 {
-  margin: 90px 0 45px 0;
+  margin: 0 0 45px 0;
   font-weight: 800;
   color: #541507;
 }
@@ -206,7 +207,7 @@ a {
 /* --- texte reco avec effet 3D --- */
 .textReco {
   color: #541507;
-  background-color: rgb(255, 244, 244);
+  /*background-color: rgb(255, 255, 255);*/
   border: 1px solid rgb(14, 0, 0);
   border-radius: 60px;
   padding: 40px 30px;
@@ -259,7 +260,6 @@ a {
 }
 
 #footer {
-  background-color: #FBD6E1;
   padding: 60px 40px;
 }
 
@@ -317,6 +317,13 @@ footer a {
 
 
 /* --- SECTIONS --- */
+
+#accueil.section,
+#footer.section {
+  background-color: #f6aac03d;
+
+}
+
 #apropos.section,
 #mesprojets.section,
 #recommandations.section {
@@ -324,15 +331,7 @@ footer a {
   margin-bottom: 3em;
   padding-top: 0.5em;
   padding-bottom: 3em;
-  /* background-color: pink; */
-}
-
-#apropos.section {
-  background-color: #FBD6E1;
-}
-
-#footer.section {
-  background-color: #FBD6E1;
+  background-color: #fff6f8;
 }
 
 .presentation {
@@ -346,7 +345,7 @@ footer a {
 }
 
 .photoMoi {
-  width: 493px;
+  width: 540px;
   max-width: 100%;
   height: auto;
   transform: rotate(-2deg);
@@ -362,13 +361,32 @@ footer a {
   border: 2px solid #541507;
   border-radius: 10px;
   text-decoration: none;
+  background-color: #541507;
+  color: rgb(255, 244, 244);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 40px 0 0;
+}
+
+.boutonTelecharger:hover {
+  background-color: rgb(255, 244, 244);
+  color: #541507;
+  border-color: #541507;
+}
+
+.boutonLinkedin {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #541507;
+  border-radius: 10px;
+  text-decoration: none;
   background-color: rgb(255, 244, 244);
   color: #541507;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.boutonTelecharger:hover {
+.boutonLinkedin:hover {
   background-color: #541507;
   color: rgb(255, 244, 244);
   border-color: #541507;
@@ -391,9 +409,13 @@ footer a {
 .liste-projets {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px 100px;
+  gap: 50px 30px;
   justify-items: center;
 }
+/*
+.liste-projets .projet {
+  gap: 0 100px;
+}*/
 
 .projet {
   display: flex;
@@ -403,8 +425,8 @@ footer a {
 
 .projet .carte {
   /*background-color: rgb(255, 244, 244);*/
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 300px;
   border: 1px solid rgb(14, 0, 0);
   border-radius: 15px;
   box-shadow: 10px 10px 0px #541507;
@@ -414,9 +436,10 @@ footer a {
 }
 
 .carte img {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 300px;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .projet .carte:hover {
@@ -839,6 +862,7 @@ footer img {
   .body {
     max-width: 1024px;
   }
+
   .presentation {
     flex-direction: column;
     text-align: center;
