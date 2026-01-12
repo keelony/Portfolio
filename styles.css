@@ -84,6 +84,14 @@ header {
   color: #e6007e;
 }
 
+.menu a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  color: #e6007e; /* optionnel */
+}
+
+
 
 
 
@@ -103,8 +111,8 @@ header {
 /* --- TEXTES ---*/
 /*** --- LES TEXTES PAS EN PX!!!!!!!! --- ***/
 h1 {
-  font-family: 'Kalufira', sans-serif;
-  font-weight: 300;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
   font-size: 2.7rem;
   margin-bottom: 40px;
   color: #541507;
@@ -202,7 +210,8 @@ a {
   border-radius: 60px;
   padding: 40px 30px;
   box-shadow: 10px 10px 0px #541507;
-  width: 100%;
+  width: 300px;
+  height: 120px;
   line-height: 1.5;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -562,6 +571,44 @@ footer a {
 }
 
 
+.popup-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 1300px;
+  gap: 20px;
+}
+
+.popup-navigation button {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 2px solid #541507;
+  background-color: rgb(255, 244, 244);
+  color: #541507;
+  width: 170px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popup-navigation button:hover:not(:disabled) {
+  background-color: #541507;
+  color: white;
+}
+
+.popup-navigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
 /* --- ZONE INFOS PROJET + CARTES + PICTOS --- */
 
 .zone-infos-projet {
@@ -578,7 +625,7 @@ footer a {
 
 /* carte rose texte */
 .carte-info {
-  background-color: #ffbcd05b;
+  background-color: #dec7c75b;
   border-radius: 40px;
   padding: 25px 35px;
   min-width: 230px;
@@ -610,7 +657,7 @@ footer a {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 999px;
-  background-color: #FF808D;
+  background-color: #ffb8bf;
   color: #541507;
   font-weight: 700;
   box-shadow: 0 5px 5px rgba(72, 0, 29, 0.362);

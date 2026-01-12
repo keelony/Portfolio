@@ -1,73 +1,122 @@
-// --- OUVERTURE DES POPUPS PROJETS ---
+// --- OUVERTURE DES POPUPS PROJETS + NAVIGATION ---
 
 const projets = document.querySelectorAll('.projet');
+const projetsContents = document.querySelectorAll('#contenus-projets > section');
 
-projets.forEach(projet => {
-  projet.addEventListener('click', () => {
+function openProjectByIndex(index) {
 
-    const id = projet.getAttribute('data-projet');
-    const contenu = document.querySelector(`#projet-${id}`).innerHTML;
+  const contenu = projetsContents[index].innerHTML;
 
-    // création de l’overlay
-    const overlay = document.createElement('div');
-    overlay.classList.add('popup-overlay');
+  // suppression ancienne popup si existe
+  const oldOverlay = document.querySelector('.popup-overlay');
+  if (oldOverlay) oldOverlay.remove();
 
-    // création de la popup
-    const popup = document.createElement('div');
-    popup.classList.add('popup');
+  // overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('popup-overlay');
 
-    // bouton de fermeture
-    const closeBtn = document.createElement('button');
-    closeBtn.classList.add('popup-close');
-    closeBtn.innerHTML = 'X';
+  // popup
+  const popup = document.createElement('div');
+  popup.classList.add('popup');
 
-    // injecter le contenu + bouton
-    popup.innerHTML = contenu;
-    popup.appendChild(closeBtn);
+  popup.innerHTML = contenu;
 
-    overlay.appendChild(popup);
-    document.body.appendChild(overlay);
+  const navTop = createNavigationBar(index);
+  const navBottom = createNavigationBar(index);
 
-    // fermer la popup
-    closeBtn.addEventListener('click', () => overlay.remove());
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.remove();
+  popup.prepend(navTop);   // en haut
+  popup.appendChild(navBottom); // en bas
+  // bouton fermeture
+  const closeBtn = document.createElement('button');
+  closeBtn.classList.add('popup-close');
+  closeBtn.innerHTML = 'X';
+
+  popup.appendChild(closeBtn);
+
+  // --- BOUTONS NAVIGATION ---
+  function createNavigationBar(index) {
+    const nav = document.createElement('div');
+    nav.className = 'popup-navigation';
+
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = '← Projet précédent';
+    prevBtn.disabled = index === 0;
+
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = 'Projet suivant →';
+    nextBtn.disabled = index === projetsContents.length - 1;
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openProjectByIndex(index - 1);
     });
 
-    // activer les contrôles vidéo pour cette popup
-    initPopupVideoControls();
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openProjectByIndex(index + 1);
+    });
+
+    nav.appendChild(prevBtn);
+    nav.appendChild(nextBtn);
+
+    return nav;
+  }
+
+  // -------------------------
+
+  overlay.appendChild(popup);
+  document.body.appendChild(overlay);
+
+  // fermer popup
+  closeBtn.addEventListener('click', () => overlay.remove());
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) overlay.remove();
+  });
+
+  // vidéos
+  initPopupVideoControls();
+}
+
+
+// clic sur cartes projets
+projets.forEach((projet, index) => {
+  projet.addEventListener('click', () => {
+    openProjectByIndex(index);
   });
 });
 
-// --- CONTROLES VIDEO PLAY / PAUSE ---
 
-function initPopupVideoControls() {
-  // on prend le DERNIER overlay ajouté (celui qu'on vient d'ouvrir)
-  const overlays = document.querySelectorAll('.popup-overlay');
-  const popup = overlays[overlays.length - 1];
-  if (!popup) return;
 
-  const video = popup.querySelector('video');
-  const btn = popup.querySelector('.video-btn');
-  if (!video || !btn) return;
 
-  // lancer la vidéo (autoplay) quand la popup s’ouvre
-  video.play().catch(() => {
-    // certains navigateurs peuvent bloquer l'autoplay si pas muted
-  });
+///Detection visible de la barre de nav (chaque texte de la barre est souligné selon sa section respective/////
 
-  // on démarre avec le bouton "pause"
-  btn.textContent = '⏸';
+const sections = document.querySelectorAll("section, footer");
+const navLinks = document.querySelectorAll(".menu a");
 
-  // clic sur le bouton : toggle play / pause
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (video.paused) {
-      video.play();
-      btn.textContent = '⏸';
-    } else {
-      video.pause();
-      btn.textContent = '⏵';
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
     }
   });
-}
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+
+
