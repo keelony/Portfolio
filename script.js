@@ -183,18 +183,33 @@ anime.timeline({ loop: false })
 
 
 
-////////////////////MENU BURGER//////////////////
+////////////////////MENU BURGER AVEC ANIME.JS//////////////////
 
+//////////////////// MENU BURGER //////////////////
 const hamburger = document.getElementById('hamburger');
 const menuList = document.getElementById('menu-list');
+const menuItems = document.querySelectorAll('#menu-list li');
 
-// Ouvre et ferme le menu au clic sur le burger
 hamburger.addEventListener('click', () => {
+    const isOpen = menuList.classList.contains('active');
+    
     hamburger.classList.toggle('active');
     menuList.classList.toggle('active');
+
+    // Petit effet d'apparition des liens un par un
+    if (!isOpen) {
+        anime({
+            targets: menuItems,
+            translateX: [50, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(100),
+            easing: 'easeOutExpo',
+            duration: 600
+        });
+    }
 });
 
-// Ferme le menu automatiquement quand on clique sur un lien (pour naviguer)
+// Ferme le menu quand on clique sur un lien
 document.querySelectorAll('#menu-list a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');

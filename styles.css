@@ -11,14 +11,15 @@ body {
   margin: 0;
 }
 
-@font-face {
-  font-family: 'Kalufira';
-  src: url('../polices/kalufira/Kalufira.otf') format('opentype'),
-    url('../polices/kalufira/Kalufira.ttf') format('truetype');
+/*@font-face {
+  font-family: 'Kalufira';*/
+  /* On met le WOFF2 en premier car c'est le plus léger, puis le WOFF */
+  /*src: url('polices/kalufira/Kalufira.woff2') format('woff2'),
+       url('polices/kalufira/Kalufira.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+}*/
 
 
 
@@ -62,6 +63,13 @@ header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.152);
 }
 
+.menu ul li a {
+  font-family: "Archivo", sans-serif;
+  text-decoration: none;
+  color: #541507;
+}
+
+
 .menu ul {
   display: flex;
   list-style: none;
@@ -76,7 +84,6 @@ header {
 
 .menu a {
   text-decoration: none;
-  color: #541507;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -113,7 +120,7 @@ header {
 /* --- TEXTES ---*/
 /*** --- LES TEXTES PAS EN PX!!!!!!!! --- ***/
 h1 {
-  font-family: 'Kalufira', sans-serif;
+  /*font-family: 'Kalufira', sans-serif;*/
   font-weight: 900;
   font-size: 2.7rem;
   margin-bottom: 40px;
@@ -125,6 +132,8 @@ h1 {
   display: inline-block;
   line-height: 1em;
   text-shadow: #ff7ea2 1px 0 10px;
+    /*font-family: 'Kalufira', sans-serif;*/
+
 }
 
 .sous-titre {
@@ -588,7 +597,7 @@ footer a {
   border: none;
   font-weight: 900;
   font-size: 40px;
-  font-family: Kalufira;
+  /*font-family: Kalufira;*/
   cursor: pointer;
   color: #541507;
 }
@@ -902,14 +911,11 @@ footer img {
 
 
 .hamburger {
-  display: none;
-  /* Caché sur desktop */
+  display: none; 
   cursor: pointer;
   flex-direction: column;
   gap: 6px;
-  z-index: 1100;
-  /* Toujours au-dessus du menu */
-  padding: 10px;
+  z-index: 2100;
 }
 
 .hamburger span {
@@ -918,7 +924,7 @@ footer img {
   height: 3px;
   background-color: #541507;
   border-radius: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 /* --- TRANSFORMATION EN CROIX --- */
