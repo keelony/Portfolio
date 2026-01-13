@@ -74,7 +74,29 @@ function openProjectByIndex(index) {
   });
 
   // vidéos
-  initPopupVideoControls();
+  // Gestion du bouton Play/Pause
+  const video = popup.querySelector('#videoTicket');
+  const videoBtn = popup.querySelector('#videoBtn');
+
+  if (video && videoBtn) {
+    // Par défaut, la vidéo est en autoplay, donc le bouton est en mode "pause"
+    videoBtn.classList.remove('paused');
+
+    videoBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        videoBtn.classList.remove('paused'); // Montrera l'icône pause
+      } else {
+        video.pause();
+        videoBtn.classList.add('paused');    // Montrera l'icône play
+      }
+    });
+  }
+
+
+
+
+
 }
 
 
@@ -119,4 +141,41 @@ window.addEventListener("scroll", () => {
 
 
 
+
+
+
+////////////Animation du texte "portfolio" dand l'écran d'accueil//////////////////////////////////////////////////////
+
+// Découpe le texte en lettres
+const textWrapper = document.querySelector('.anime-text');
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+
+anime.timeline({ loop: false })
+  // PHASE 1 : les lettres sautent + rotation
+  .add({
+    targets: '.anime-text .letter',
+    translateY: [
+      { value: -120, duration: 600, easing: 'easeOutQuad' }
+    ],
+    rotate: {
+      value: '1turn',
+      duration: 600,
+      easing: 'easeOutQuad'
+    },
+    opacity: [0, 1],
+    delay: (el, i) => i * 80
+  })
+
+  // PHASE 2 : les lettres redescendent avec rebond
+  .add({
+    targets: '.anime-text .letter',
+    translateY: [
+      { value: 0, duration: 800 }
+    ],
+    easing: 'easeOutBounce',
+    delay: (el, i) => i * 80
+  });
 
