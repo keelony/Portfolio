@@ -901,6 +901,41 @@ footer img {
 
 
 
+.hamburger {
+  display: none;
+  /* Caché sur desktop */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1100;
+  /* Toujours au-dessus du menu */
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #541507;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- TRANSFORMATION EN CROIX --- */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
 
 /* --- responsive --- */
 /* --- RESPONSIVE : TABLETTES (jusqu'à 1024px) --- */
@@ -908,6 +943,7 @@ footer img {
 
   .body {
     max-width: 1024px;
+    font-family: 'Archivo', sans-serif;
   }
 
   .presentation {
@@ -935,6 +971,7 @@ footer img {
 
 
 /* --- RESPONSIVE : MOBILES (jusqu'à 768px) --- */
+/*/////////////////////////////////////////////*/
 @media (max-width: 768px) {
   header {
     padding: 10px 0;
@@ -1107,4 +1144,57 @@ footer img {
     font-size: 0.8rem;
     padding: 10px 5px;
   }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .menu {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .menu ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Totalement caché à droite au départ */
+    width: 250px;
+    /* Largeur du tiroir */
+    height: 100vh;
+    background-color: rgb(255, 244, 244);
+    border-left: 2px solid #541507;
+    flex-direction: column;
+    justify-content: center;
+    /* Centre les liens verticalement */
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    /* Animation fluide */
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+  }
+
+  /* État ouvert du menu */
+  .menu ul.active {
+    right: 0;
+    /* Glisse vers l'intérieur de l'écran */
+  }
+
+  .menu ul li a {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+
+
 }

@@ -179,3 +179,25 @@ anime.timeline({ loop: false })
     delay: (el, i) => i * 80
   });
 
+
+
+
+
+////////////////////MENU BURGER//////////////////
+
+const hamburger = document.getElementById('hamburger');
+const menuList = document.getElementById('menu-list');
+
+// Ouvre et ferme le menu au clic sur le burger
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menuList.classList.toggle('active');
+});
+
+// Ferme le menu automatiquement quand on clique sur un lien (pour naviguer)
+document.querySelectorAll('#menu-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        menuList.classList.remove('active');
+    });
+});
