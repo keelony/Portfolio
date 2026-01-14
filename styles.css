@@ -819,6 +819,8 @@ footer a {
 
 .descriptionprojets img {
   width: 419px;
+  height: 313px;
+  object-fit: cover;
   border-radius: 15px;
   box-shadow: 10px 10px 0px #541507;
 }
@@ -830,10 +832,11 @@ footer a {
 }
 
 .galerie img {
-  width: 309px;
-  height: 230px;
+  width: 370px;
+  height: 270px;
   border-radius: 15px;
   box-shadow: 10px 10px 0px #541507;
+  object-fit: cover;
   /*object-fit: contain;*/
 }
 
