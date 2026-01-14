@@ -13,8 +13,8 @@ body {
 
 /*@font-face {
   font-family: 'Kalufira';*/
-  /* On met le WOFF2 en premier car c'est le plus léger, puis le WOFF */
-  /*src: url('polices/kalufira/Kalufira.woff2') format('woff2'),
+/* On met le WOFF2 en premier car c'est le plus léger, puis le WOFF */
+/*src: url('polices/kalufira/Kalufira.woff2') format('woff2'),
        url('polices/kalufira/Kalufira.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -132,7 +132,7 @@ h1 {
   display: inline-block;
   line-height: 1em;
   text-shadow: #ff7ea2 1px 0 10px;
-    /*font-family: 'Kalufira', sans-serif;*/
+  /*font-family: 'Kalufira', sans-serif;*/
 
 }
 
@@ -504,6 +504,11 @@ footer a {
   flex-direction: column;
   align-items: center;
   width: 350px;
+}
+
+.lienfigma:hover {
+  transition: color 0.3s ease;
+  color: #e6007e;
 }
 
 
@@ -914,7 +919,7 @@ footer img {
 
 
 .hamburger {
-  display: none; 
+  display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 6px;
