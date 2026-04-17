@@ -110,6 +110,11 @@ projets.forEach((projet, index) => {
 
 
 
+
+
+
+
+
 ///Detection visible de la barre de nav (chaque texte de la barre est souligné selon sa section respective/////
 
 const sections = document.querySelectorAll("section, footer");
@@ -138,6 +143,10 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+
 
 
 
@@ -183,6 +192,11 @@ anime.timeline({ loop: false })
 
 
 
+
+
+
+
+
 ////////////////////MENU BURGER AVEC ANIME.JS//////////////////
 
 //////////////////// MENU BURGER //////////////////
@@ -215,4 +229,37 @@ document.querySelectorAll('#menu-list a').forEach(link => {
         hamburger.classList.remove('active');
         menuList.classList.remove('active');
     });
+});
+
+
+
+
+
+
+
+// --- FILTRES PROJETS ---
+const filtresBtns = document.querySelectorAll('.filtre-btn');
+
+filtresBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Mettre à jour le bouton actif
+    filtresBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filtre = btn.getAttribute('data-filtre');
+
+    projets.forEach(projet => {
+      if (filtre === 'tous') {
+        projet.classList.remove('cache');
+      } else {
+        // data-categorie peut contenir plusieurs valeurs séparées par un espace
+        const categories = projet.getAttribute('data-categorie').split(' ');
+        if (categories.includes(filtre)) {
+          projet.classList.remove('cache');
+        } else {
+          projet.classList.add('cache');
+        }
+      }
+    });
+  });
 });

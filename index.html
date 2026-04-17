@@ -43,7 +43,7 @@
 
   <section id="accueil" class="section">
     <h1 class="banniere anime-text">PORTFOLIO</h1>
-    <h2 class="sous-titre">Création numérique et montage</h2>
+    <h2 class="sous-titre">Montage vidéo ⸱ UX/UI Design ⸱ Graphisme </h2>
   </section>
 
   <section id="apropos" class="section">
@@ -143,49 +143,111 @@
   <section id="mesprojets" class="section">
     <h1>MES PROJETS</h1>
 
-    <div class="liste-projets">
+    <!--FILTRES-->
+    <div class="filtres-projets">
+      <button class="filtre-btn active" data-filtre="tous">TOUS</button>
+      <button class="filtre-btn" data-filtre="uxui">UX/UI</button>
+      <button class="filtre-btn" data-filtre="audiovisuel">AUDIOVISUEL</button>
+      <button class="filtre-btn" data-filtre="graphisme">GRAPHISME</button>
+      <button class="filtre-btn" data-filtre="devweb">DÉVELOPPEMENT WEB</button>
+    </div>
 
-      <div class="projet" data-projet="1">
-        <div class="carte"><img src="img/mockups/courtmetrage.jpg"
+    <div class="liste-projets">
+      <!--LES PROJETS-->
+      <div class="projet" data-projet="1" data-categorie="audiovisuel">
+        <div class="carte"><img src="img/THUMBNAIL/ALTER.png" alt="Capture d'écran de mon Teaser"></div>
+        <h2>ALTER - Teaser</h2>
+        <p><b>Motion design ⸱ Sound design</b></p>
+        <p>Mars 2026</p>
+        </p>
+      </div>
+
+      <div class="projet" data-projet="2" data-categorie="uxui">
+        <div class="carte"><img src="img/THUMBNAIL/LA BOUTIQUE.png"
+            alt="Page de la boutique de notre site web, avec des éléments de la charte graphique"></div>
+        <h2>ALTER - Maquettage du site d’exposition</h2>
+        <p><b>UX/UI Design</b></p>
+        <p>Mars 2026</p>
+        </p>
+      </div>
+
+      <div class="projet" data-projet="3" data-categorie="audiovisuel">
+        <div class="carte"><img src="img/THUMBNAIL/Le portail des saveurs miniature.png"
             alt="Miniature de mon court métrage - Le portail des Saveurs">
         </div>
-        <h2>Court métrage</h2>
-        <p>Le portail des saveurs<br>septembre 2025 - janvier 2026</p>
+        <h2>Le portail des saveurs - Court métrage</h2>
+        <p><b>Montage vidéo</b></p>
+        <p>Septembre 2025 - Décembre 2025</p>
+        </p>
       </div>
 
-      <div class="projet" data-projet="2">
-        <div class="carte"><img src="img/mockups/interviewminiature.jpg"
-            alt="Miniature de Mon interview d'un journaliste"></div>
-        <h2>Interview</h2>
-        <p>Interview du journaliste Guillaume Goubert<br>octobre 2024 - janvier 2025</p>
+      <div class="projet" data-projet="4" data-categorie="audiovisuel">
+        <div class="carte"><img src="img/THUMBNAIL/guillaumeordi.png" alt="Miniature de Mon interview d'un journaliste">
+        </div>
+        <h2>Interview de Guillaume Goubert</h2>
+        <p><b>Montage vidéo ⸱ Tournage vidéo ⸱ Fond vert ⸱ Sound design</b></p>
+        <p>Octobre 2024 - Janvier 2025</p>
+        </p>
       </div>
 
-      <div class="projet" data-projet="3">
-        <div class="carte"><img src="img/mockups/campagneGrand.jpg" alt="Page d'accueil de ma maquette UX / UI"></div>
-        <h2>Graphisme & Design Ux / Ui</h2>
-        <p>Refonte d'un site web<br>novembre 2025</p>
+      <div class="projet" data-projet="5" data-categorie="uxui">
+        <div class="carte"><img src="img/THUMBNAIL/JPO DESKTOP 1.png"
+            alt="Page d'accueil de la refonte du site web du BUT MMI"></div>
+        <h2>JPO MMI 2026 - Site web</h2>
+        <p><b>UX/UI design</b></p>
+        <p>Janvier 2026 - Février 2026</p>
+        </p>
       </div>
 
-      <div class="projet" data-projet="4">
-        <div class="carte"><img src="img/mockups/dataviz.jpg" alt="Page d'accueil du site web de mon Projet"></div>
-        <h2>Data Visualisation</h2>
-        <p>Singing For The Stats <br>septembre 2025 - novembre 2025</p>
+      <div class="projet" data-projet="6" data-categorie="graphisme">
+        <div class="carte"><img src="img/THUMBNAIL/AFFICHE JPO.png" alt="Affiche des JPO"></div>
+        <h2>JPO MMI 2026 - Affiche</h2>
+        <p><b>Graphisme</b></p>
+        <p>Janvier 2026 - Février 2026</p>
+        </p>
       </div>
 
-      <div class="projet" data-projet="5">
-        <div class="carte"><img src="img/mockups/mockup myrtille.jpg" alt="Mockup de mon packaging de glace"></div>
-        <h2>Graphisme</h2>
-        <p>Packaging d'un produit<br>septembre 2024</p>
+      <div class="projet" data-projet="7" data-categorie="audiovisuel">
+        <div class="carte"><img src="img/THUMBNAIL/POISSON.png" alt="Capture d'écran de mon teaser"></div>
+        <h2>Campagne de sensibilisation WeOcean</h2>
+        <p><b>Motion Design</b></p>
+        <p>Juin 2025</p>
+        </p>
       </div>
 
-      <div class="projet" data-projet="6">
-        <div class="carte"><img src="img/mockups/webinventory.jpg"
+      <div class="projet" data-projet="8" data-categorie="uxui">
+        <div class="carte"><img src="img/THUMBNAIL/NTR mur mockup.png" alt="Page d'accueil de ma maquette UX / UI">
+        </div>
+        <h2>Nanterre 92 Basket - Refonte site web</h2>
+        <p><b>UX/UI Design</b></p>
+        <p>Novembre 2025</p>
+        </p>
+      </div>
+
+      <div class="projet" data-projet="9" data-categorie="uxui devweb">
+        <div class="carte"><img src="img/THUMBNAIL/DATAVIZ.png" alt="Page d'accueil du site web de mon Projet"></div>
+        <h2>Singing For The Stats - Data Visualisation</h2>
+        <p><b>UX/UI Design ⸱ Développement web front</b></p>
+        <p>Septembre 2025 - Novembre 2025</p>
+        </p>
+      </div>
+
+      <div class="projet" data-projet="10" data-categorie="devweb">
+        <div class="carte"><img src="img/THUMBNAIL/webinventory.jpg"
             alt="Page d'accueil de mon site web inventaire de voyage"></div>
-        <h2>Site web inventaire</h2>
-        <p>Webinventory<br>février 2025 - mai 2025</p>
+        <h2>Site de destination de voyages</h2>
+        <p><b>Développement front-end & back</b></p>
+        <p>Février 2025 - Mai 2025</p>
+        </p>
       </div>
 
-
+      <div class="projet" data-projet="11" data-categorie="graphisme">
+        <div class="carte"><img src="img/THUMBNAIL/PACKAGING mockup.jpg" alt="Mockup de mon packaging de glace"></div>
+        <h2>Packaging d’un produit</h2>
+        <p><b>Graphisme</b></p>
+        <p>Septembre 2024</p>
+        </p>
+      </div>
 
 
   </section>
@@ -197,34 +259,97 @@
   <div id="contenus-projets" style="display:none;">
 
 
-
+    <!--ALTER MOTION DESIGN-->
     <section id="projet-1" class="contenuprojets">
       <section class="contenuprojets">
 
 
         <div class="tetedescription">
-          <h2>Court-métrage - Le portail des saveurs</h2>
-          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser un court-métrage dans le but d’incruster
-            une personne dans un fond vert</h3>
-          <p>septembre 2025 - janvier 2026</p>
-          <img src="img/mockups/courtmetrage.jpg" alt="Miniature de mon court métrage - Le portail des Saveurs">
+          <h2>ALTER - Teaser</h2>
+          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser un teaser pour promouvoir notre
+            exposition (fictive).</h3>
+          <p>Mars 2026</p>
+          <img src="img/THUMBNAIL/ALTER.png" alt="Capture d'écran de mon Teaser">
         </div>
 
         <section class="introprojets">
           <div class="zone-infos-projet">
             <div class="carte-info">
               <p class="titre-carte">Logiciels et outils</p>
-              <p>Premiere Pro, After Effects</p>
+              <p>After Effects, Photoshop</p>
             </div>
 
             <div class="carte-info">
               <p class="titre-carte">Compétences</p>
-              <p>Tournage vidéo, montage, incrustation sur fond vert, design son</p>
+              <p>Motion Design, Sound Design</p>
             </div>
 
             <div class="carte-bouton">
-              <!--<p class="titre-carte">Voir le projet</p>-->
-              <a class="btn-projet" href="https://youtu.be/HzAq5An-ZSg?si=HEdcf1c6nhoPKT1Q" target="_blank">
+              <a class="btn-projet" href="https://youtu.be/xekA0KXtj8M" target="_blank">
+                Voir le projet
+              </a>
+            </div>
+          </div>
+
+          <div class="textepopup">
+            <p>
+              Ce projet est un teaser pour une exposition immersive fictive dans laquelle nous abordons l’usage de la
+              technologie dans le manga Akira et l’impact de ces technologies dans l’œuvre. J'ai personnellement réalisé
+              l'intro avec un effet “glitch art” et des textes néons, ainsi que l’animation de quelques planches du
+              manga original. En groupe, nous avons combiné des effets parallaxe et glitch art, pour évoquer la
+              corruption mentale des personnages et l'esthétique VHS des télévisions de l'époque du manga. La bande
+              sonore nous évoquait également l’univers d’Akira, nous avons voulu l’améliorer en rajoutant quels effets
+              sonores pour rendre notre vidéo plus impactante.
+            </p>
+
+            <p>
+              <b>Choix du thème</b>
+              <br>C’est une œuvre dont certains membres du groupe étaient déjà familiers. Ce manga offre une richesse
+              visuelle
+              et narrative exceptionnelle, qui nous est offerte par Katsuhiro Otomo. Celle-ci s’est trouvée très
+              inspirante, nous offrant de multiples idées d’angles d’attaque. 
+              <br>En découvrant la vision d'Otomo, nous avons souhaité explorer la dérive commune de l'humain face à la
+              science. La relecture de l'œuvre nous a donc permis d'aboutir à la problématique suivante : “Comment
+              l’aliénation d’une société peut-elle impacter sa technologie”. 
+            </p>
+          </div>
+
+
+
+        </section>
+
+        <img src="img/popupcontent/INSERER UNE VIDEO.jpg" alt="" class="imgpopup imgpopup--video">
+      </section>
+    </section>
+
+    <!--ALTER MAQUETTE-->
+    <section id="projet-2" class="contenuprojets">
+      <section class="contenuprojets">
+
+
+        <div class="tetedescription">
+          <h2>ALTER - Maquette du site d’exposition</h2>
+          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser la maquette du site web de notre
+            exposition (fictive).</h3>
+          <p>Mars 2026</p>
+          <img src="img/THUMBNAIL/LA BOUTIQUE.png"
+            alt="Page de la boutique du site, avec des éléments de la charte graphique">
+        </div>
+
+        <section class="introprojets">
+          <div class="zone-infos-projet">
+            <div class="carte-info">
+              <p class="titre-carte">Logiciels et outils</p>
+              <p>Figma</p>
+            </div>
+
+            <div class="carte-info">
+              <p class="titre-carte">Compétences</p>
+              <p>Maquettage, conception UX / UI , Webdesign</p>
+            </div>
+
+            <div class="carte-bouton">
+              <a class="btn-projet" href="https://www.figma.com/design/cO2ZBiYOyPi7yyLRZHU1Vw/ALTER---MAQUETTES-DU-SITE-WEB?node-id=0-1&t=aZWlYsHpfeklH1fu-1" target="_blank">
                 Voir le projet
               </a>
             </div>
@@ -232,83 +357,98 @@
 
           <div class="textehaut">
             <p>
-              Le Portail des Saveurs est un court-métrage réalisé dans le cadre d’un projet académique de groupe,
-              explorant l’incrustation sur fond vert, en choisissant en fond vert le monde de Charlie et la
-              Chocolaterie. Mon court-métrage met en scène une jeune femme qui bascule d’un monde réel, filmé en noir et
-              blanc, vers un univers imaginaire coloré. L’incrustation, le montage et le design sonore servent la
-              transition entre ces deux mondes, en jouant sur
-              le contraste visuel et sensoriel.
-              <br>Ce projet m’a permis de développer des compétences en tournage, en incrustation sur fond vert, montage
-              vidéo et à l’utilisation d’un stabilisateur Osmo. Ce projet est particulièrement important pour moi, car
-              il m’a permis de renforcer mes compétences en montage vidéo et de découvrir le travail d’incrustation sur
-              fond vert dans le cadre d’un court-métrage.
+              Ce projet est une maquette du site web de notre exposition immersive et fictive.
+              <br>J’ai réalisé l’intégralité des maquettes responsives (desktop & mobile) pour le site web de
+              l’exposition
+              Akira. Ce projet incluait notamment la conception d’une billetterie de réservation fluide et optimisée,
+              centrée sur le parcours utilisateur. Cette maquette a été réalisée après avoir conçu la charte graphique
+              de l’exposition, dans un thème sombre et cyberpunk pour mettre en avant l’univers de l’oeuvre originale.
+
+              <br>Voici le site web final, développé grâce aux maquettes : <a class="lienfigma"
+                href="alter-exposition.fr/" target="_blank">
+                alter-exposition.fr/
+              </a>
             </p>
           </div>
         </section>
 
-        <section class="description">
-          <section class="descriptionprojets">
-            <img src="img/mockups/telecharlie2.png" alt="Mockup de Charlie et la Chocolateriedans une télévision">
-            <p>
-              <b>Choix du film</b>
-              <br>
-              En équipe, nous avons choisi ce film car c’est un univers qui nous plaisait à toutes. Il propose de
-              nombreuses séquences exploitables et visuellement riches pour l’incrustation. Les plans étant relativement
-              longs, cela nous a offert une grande liberté créative et plusieurs possibilités de mise en scène.
-            </p>
-          </section>
 
-          <section class="galerie">
-            <img src="img/popupcontent/affichecharlie.png" alt="Affiche Charlie et la Chocolaterie accrochée à un mur">
-            <img src="img/popupcontent/fondvertmaelys.png" alt="Capture d'écran du court-métrage fond vert">
-            <img src="img/popupcontent/maelyschocolat.png" alt="Capture d'écran du court-métrage">
-          </section>
-
-          <!--<section class="descriptionprojets">
-            <p><b>Le tournage et le scénario</b>
-              <br>
-              Dans mon projet, j'ai confié le rôle principal à l’une de mes collègues.
-              <br>Dans le scénario, l’actrice entre dans un magasin en passant devant une affiche, elle n'y prête pas
-              attention. Elle s’arrête devant le rayon chocolat, une tablette attire alors étrangement son attention.
-              Elle décide de l’ouvrir et découvre à l’intérieur le fameux ticket d’or du film. Derrière elle, il y a une
-              porte d’où émane une lumière intense. En l’ouvrant, l’actrice bascule dans un monde imaginaire, celui de
-              la chocolaterie de Willy Wonka.
-
-              <br><br>L’image choisie pour l’incrustation correspond à la première séquence du film, dans laquelle les
-              personnages découvrent la salle avec la rivière de chocolat de Willy Wonka, juste avant la scène
-              emblématique où le personnage Augustus Gloop tombe dans la rivière et se fait aspirer par un tuyau de
-              verre.
-            </p>
-          </section>-->
-
-          <section class="descriptionprojets">
-            <p><b>Le montage</b>
-              <br>
-              J’ai mis un effet noir et blanc à l’image grâce à l’effet Couleur Lumetri, en conservant uniquement le
-              ticket d’or en couleur, dans le but de diriger le regard du spectateur vers cet élément clé, ansi qu’une
-              voix off dans l’objectif de représenter un monologue intérieur.
-            </p>
-            <div class="video-wrapper">
-              <video id="videoTicket" autoplay muted loop>
-                <source src="video/ticketjaune.mp4" type="video/mp4" alt="Extrait vidéo du court-métrage">
-              </video>
-              <button class="video-btn" id="videoBtn"></button>
-            </div>
-
-
-            <!--<img src="img/popupcontent/ticketjaune.png" alt="">-->
-          </section>
-        </section>
-
-
-
-
+        <div class="grille-imgpopup">
+          <img src="img/popupcontent/ALTER reservation mobile.png" class="imgpopup imgpopup--mobile"
+            alt="Page de réservation mobile">
+          <img src="img/popupcontent/ALTER reservation desktop.png" class="imgpopup imgpopup--desktop"
+            alt="Page de réservation desktop">
+        </div>
 
 
       </section>
+
     </section>
 
-    <section id="projet-2" class="contenuprojets">
+    <!--COURT METRAGE-->
+    <section id="projet-3" class="contenuprojets">
+
+      <div class="tetedescription">
+        <h2>Le Portail Des Saveurs - Court-métrage</h2>
+        <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser un court-métrage dans le but d'incruster
+          une personne dans un fond vert</h3>
+        <p>Septembre 2025 - Décembre 2025</p>
+        <img src="img/THUMBNAIL/Le portail des saveurs miniature.png"
+          alt="Miniature de mon court métrage - Le portail des Saveurs">
+      </div>
+
+      <section class="introprojets">
+        <div class="zone-infos-projet">
+          <div class="carte-info">
+            <p class="titre-carte">Logiciels et outils</p>
+            <p>Premiere Pro, After Effects</p>
+          </div>
+
+          <div class="carte-info">
+            <p class="titre-carte">Compétences</p>
+            <p>Tournage vidéo, montage, incrustation sur fond vert, design son</p>
+          </div>
+
+          <div class="carte-bouton">
+            <a class="btn-projet" href="https://youtu.be/HzAq5An-ZSg?si=HEdcf1c6nhoPKT1Q" target="_blank">
+              Voir le projet
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="textepopup">
+        <p>
+          Le Portail des Saveurs est un court-métrage réalisé dans le cadre d'un projet académique de groupe,
+          explorant l'incrustation sur fond vert, en choisissant en fond vert le monde de Charlie et la
+          Chocolaterie. Mon court-métrage met en scène une jeune femme qui bascule d'un monde réel, filmé en noir et
+          blanc, vers un univers imaginaire coloré. L'incrustation, le montage et le design sonore servent la
+          transition entre ces deux mondes, en jouant sur le contraste visuel et sensoriel.
+          <br>Ce projet m'a permis de développer des compétences en tournage, en incrustation sur fond vert, montage
+          vidéo et à l'utilisation d'un stabilisateur Osmo. Ce projet est particulièrement important pour moi, car
+          il m'a permis de renforcer mes compétences en montage vidéo et de découvrir le travail d'incrustation sur
+          fond vert dans le cadre d'un court-métrage.
+        </p>
+        <p>
+          <b>Le montage</b>
+          <br>
+          J'ai mis un effet noir et blanc à l'image grâce à l'effet Couleur Lumetri, en conservant uniquement le ticket
+          d'or en couleur, dans le but de diriger le regard du spectateur vers cet élément clé, ainsi qu'une voix off
+          dans l'objectif de représenter un monologue intérieur.
+        </p>
+      </div>
+
+      <div class="video-wrapper video-wrapper--large">
+        <video id="videoTicket" autoplay muted loop>
+          <source src="video/ticketjaune.mp4" type="video/mp4">
+        </video>
+        <button class="video-btn" id="videoBtn"></button>
+      </div>
+
+    </section>
+
+    <!--INTERVIEW-->
+    <section id="projet-4" class="contenuprojets">
       <section class="contenuprojets">
 
 
@@ -316,8 +456,8 @@
           <h2>Interview - Guillaume Goubert</h2>
           <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser une interview du journaliste retraité
             Guillaume Goubert (journal "La Croix") </h3>
-          <p>octobre 2024 - janvier 2025</p>
-          <img src="img/mockups/interviewminiature.jpg" alt="Miniature de Mon interview d'un journaliste">
+          <p>Octobre 2024 - Janvier 2025</p>
+          <img src="img/THUMBNAIL/guillaumeordi.png" alt="Miniature de Mon interview d'un journaliste">
         </div>
 
         <section class="introprojets">
@@ -340,7 +480,7 @@
             </div>
           </div>
 
-          <div class="textehaut">
+          <div class="textepopup">
             <p>
               Le projet consistait à réaliser l’interview d’un journaliste. En groupe, nous avons choisi d’interviewer
               Guillaume Goubert, journaliste retraité du journal La Croix, afin de recueillir le point de vue d’un
@@ -353,7 +493,128 @@
               cours
               de l’année. Ce projet m’a vraiment plu car il m’a permis de découvrir le monde de l’audiovisuel et
               d’acquérir des compétences en montage vidéo et en tournage.
+            </p>
+            <p>
+              <b>La direction artistique</b>
+              Mon intention était de recréer une forme de narration journalistique : quelque chose de simple, neutre et
+              factuel, tout en conservant une atmosphère authentique et un angle plus personnel, mettant en avant les
+              expériences et les souvenirs du journaliste.
+            </p>
+            <p>
+              <b>Le montage</b>
+              Pour rendre l’interview plus “vivante”, j’ai mis des transitions grâce à Premiere Pro, puis j’ai rajouté
+              une musique de fond et des effets sonores (bruits de machine à écrire) et des éléments évoquant le passé
+              (machine à écrire, archives INA…).
+            </p>
+          </div>
+        </section>
 
+        <img src="img/popupcontent/INSERER UNE VIDEO.jpg" alt="" class="imgpopup imgpopup--video">
+      </section>
+    </section>
+
+    <!--JPO MMI 2026 SITE WEB-->
+    <section id="projet-5" class="contenuprojets">
+      <section class="contenuprojets">
+
+
+        <div class="tetedescription">
+          <h2>JPO MMI 2026 - Site web</h2>
+          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser la refonte en maquette du site web du BUT
+            MMI de Champs-sur-Marne</h3>
+          <p>Janvier 2026 - Février 2026</p>
+          <img src="img/THUMBNAIL/JPO DESKTOP 1.png" alt="Page d'accueil de ma maquette UX / UI">
+        </div>
+
+        <section class="introprojets">
+          <div class="zone-infos-projet">
+            <div class="carte-info">
+              <p class="titre-carte">Logiciels et outils</p>
+              <p>Figma</p>
+            </div>
+
+            <div class="carte-info">
+              <p class="titre-carte">Compétences</p>
+              <p>Maquettage, conception UX / UI , webdesign</p>
+            </div>
+
+            <div class="carte-bouton">
+              <a class="btn-projet" href="" target="_blank">
+                Voir le projet
+              </a>
+            </div>
+          </div>
+
+          <div class="textepopup">
+            <p>
+              En groupe nous avons réalisé la refonte du site BUT MMI de Champs-sur-Marne.
+              <br>J’ai réalisé l’intégralité des maquettes responsives (desktop & mobile) en respectant la charte
+              graphique
+              que nous avons également créé. Ce projet incluait notamment la réalisation d’une affiche, d’un nouveau
+              logo et d’une nouvelle charte graphique. Ce projet m’a permis de m’améliorer davantage en Ui design.
+            </p>
+          </div>
+        </section>
+
+
+        <div class="grille-imgpopup">
+          <img src="img/popupcontent/JPO MOBILE.png" alt="" class="imgpopup imgpopup--mobile">
+          <img src="img/popupcontent/JPO DESKTOP 2.png" alt="" class="imgpopup imgpopup--desktop">
+          <img src="img/popupcontent/JPO typo.png" alt="" class="imgpopup imgpopup--desktop">
+          <img src="img/popupcontent/JPO couleurs.png" alt="" class="imgpopup imgpopup--desktop">
+        </div>
+
+      </section>
+
+
+
+
+
+
+    </section>
+
+    <!--JPO MMI 2026 AFFICHE-->
+    <section id="projet-6" class="contenuprojets">
+      <section class="contenuprojets">
+
+
+        <div class="tetedescription">
+          <h2>JPO MMI 2026 - Affiche</h2>
+          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser une affiche pour promouvoir le BUT MMI de
+            Champs-sur-Marne.</h3>
+          <p>Septembre 2024</p>
+          <img src="img/THUMBNAIL/AFFICHE JPO.png" alt="Affiche pour les JPO MMI">
+        </div>
+
+        <section class="introprojets">
+          <div class="zone-infos-projet">
+            <div class="carte-info">
+              <p class="titre-carte">Logiciels et outils</p>
+              <p>Photoshop, caméra, trépied, éclairages</p>
+            </div>
+
+            <div class="carte-info">
+              <p class="titre-carte">Compétences</p>
+              <p>Photographie, graphisme</p>
+            </div>
+
+            <div class="carte-bouton">
+              <a class="btn-projet" href="Affiche_JPO2026-compressed.pdf" target="_blank">
+                Voir le projet
+              </a>
+            </div>
+          </div>
+
+          <div class="textepopup">
+            <p>
+              En groupe nous avons réalisé une affiche en utilisant des outils représentant la formation, par exemple un
+              ordinateur, palette de couleurs ou des livres de développement web.
+              <br>Nous avons utilisé de la pate à modeler pour écrire les textes au centre, nous avons rassemblé tous
+              nos
+              éléments clés pouvant représenter la formation puis nous avons pris une photo à l’aide d’une caméra
+              professionnelle, de trépieds et d’éclairages. Ce projet incluait notamment la refonte du site BUT MMI de
+              Champs-sur-Marne, créer un nouveau logo et une nouvelle charte graphique. Ce projet m’a permis de
+              m’améliorer davantage en montage photo et aussi de découvrir la photographie.
             </p>
           </div>
 
@@ -361,75 +622,87 @@
 
         </section>
 
-        <section class="description">
-          <section class="descriptionprojets">
-            <img src="img/popupcontent/guillaumegoubert.png" alt="Extrait de mon interview">
-            <p>
-              <b>La direction artistique</b>
-              <br>Mon intention était de recréer une forme de narration journalistique : quelque chose de simple, neutre
-              et factuel, tout en conservant une atmosphère authentique et un angle plus personnel, mettant en avant les
-              expériences et les souvenirs du journaliste.
-              <br>
-              <br>
-              <b>Le montage</b>
-              <br>
-              Pour rendre l’interview plus “vivante”, j’ai mis des transitions grâce à Premiere Pro, puis j’ai rajouté
-              une musique de fond et des effets sonores (bruits de machine à écrire) et des éléments évoquant le passé
-              (machine à écrire, archives INA…).
-            </p>
-          </section>
 
-          <section class="galerie">
-            <img src="img/popupcontent/guillaumeordi.png" alt="Capture d'écran de ma vidéo">
-            <img src="img/popupcontent/machine.png" alt="Machine à écrire">
-            <img src="img/mockups/mockup interview.png"
-              alt="Mockup d'un ordinateur qui affiche mon interview sur l'interface Premiere Pro">
-          </section>
-
-          <!--<section class="descriptionprojets">
-            <p><b>Les idées</b>
-              <br>J’ai trouvé toutes mes idées grâce aux tutoriels YouTube, je cherchais des inspirations principalement
-              axées sur la création d’intros vidéo ou de plans de coupe. <br>Je voulais également intégrer une
-              esthétique rappelant le journal papier et un aspect manuscrit dans mon interview. J’ai donc regardé des
-              vidéos expliquant comment animer du texte de type rédactionnel. En combinant ces techniques avec des
-              effets sonores de machine à écrire, j’ai pu recréer cette ambiance grâce à After Effects. Je souhaitais
-              faire écho à la manière dont les journalistes travaillaient autrefois, à l’aide de machines à écrire, et
-              intégrer cet élément visuellement et auditivement dans mon projet.
-
-            </p>
-          </section>
-
-          <section class="descriptionprojets">
-            <p>
-              <b>Le montage</b>
-              <br>
-              Pour rendre l’interview plus “vivante”, j’ai mis des transitions grâce à Premiere Pro, puis j’ai rajouté
-              une musique de fond et des effets sonores (bruits de machine à écrire) et des éléments évoquant le passé
-              (machine à écrire, archives INA…).
-            </p>
-            <img src="img/mockups/mockup interview.png"
-              alt="Mockup d'un ordinateur qui affiche mon interview sur l'interface Premiere Pro">
-          </section>-->
-        </section>
-
-
-
-
-
-
+        <div class="grille-imgpopup">
+          <img src="img/popupcontent/JPO moodboard.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/JPO couleurs.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/JPO typo.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/JPO logo.png" alt="" class="imgpopup">
+        </div>
       </section>
+
+
+
+
+
+
     </section>
 
-    <section id="projet-3" class="contenuprojets">
+    <!--WEOCEAN-->
+    <section id="projet-7" class="contenuprojets">
       <section class="contenuprojets">
 
 
         <div class="tetedescription">
-          <h2>Graphisme & Design Ux / Ui - Refonte d’un site web</h2>
+          <h2>Campagne de sensibilisation WeOcean</h2>
+          <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser un teaser pour une campagne de
+            sensibilisation des océans.</h3>
+          <p>Septembre 2024</p>
+          <img src="img/THUMBNAIL/POISSON.png" alt="Capture d'écran de mon teaser">
+        </div>
+
+        <section class="introprojets">
+          <div class="zone-infos-projet">
+            <div class="carte-info">
+              <p class="titre-carte">Logiciels et outils</p>
+              <p>After Effects, Illustrator, Photoshop</p>
+            </div>
+
+            <div class="carte-info">
+              <p class="titre-carte">Compétences</p>
+              <p>Motion design, Sound Design</p>
+            </div>
+
+            <div class="carte-bouton">
+              <a class="btn-projet" href="https://www.youtube.com/watch?v=-1uyrUVLvVI" target="_blank">
+                Voir le projet
+              </a>
+            </div>
+          </div>
+
+          <div class="textepopup">
+            <p>
+              Pour réaliser une campagne de sensibilisation pour un projet citoyen, nous avons eu l’idée de faire un
+              teaser avec une accroche qui permet de retenir l’attention du public : un poisson qui meurt en mangeant du
+              plastique.
+              <br>J’ai réalisé cette première partie en créant d’abord mon poisson sur Adobe Illustrator et Photoshop,
+              ensuite j’ai exporté mon poisson sur After Effects pour l’animé, j’ai également rajouté une musique triste
+              et des effets sonores au moment où mon poisson mange et décède pour rendre mon montage plus “vivant”. Ce
+              projet m’a permis de découvrir le motion design et After Effects.
+            </p>
+          </div>
+
+
+
+        </section>
+
+        <img src="img/popupcontent/INSERER UNE VIDEO.jpg" alt="" class="imgpopup imgpopup--video">
+
+      </section>
+
+    </section>
+
+    <!--REFONTE NANTERRE-->
+    <section id="projet-8" class="contenuprojets">
+      <section class="contenuprojets">
+
+
+        <div class="tetedescription">
+          <h2>Nanterre 92 Basket - Refonte site web</h2>
           <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser la refonte du site web de l’équipe de
             basket de Nanterre</h3>
-          <p>novembre 2025</p>
-          <img src="img/mockups/campagneGrand.jpg" alt="Page d'accueil de ma maquette UX / UI">
+          <p>Novembre 2025</p>
+          <img src="img/THUMBNAIL/NTR mur mockup.png" alt="Page d'accueil de ma maquette UX / UI">
         </div>
 
         <section class="introprojets">
@@ -457,7 +730,7 @@
             </div>
           </div>
 
-          <div class="textehaut">
+          <div class="textepopup">
             <p>
               L’objectif de ce projet était de valoriser un événement d’une ville de notre choix. Nous avons sélectionné
               le Match All Stars du club de basket de Nanterre. Le projet consistait à concevoir une identité visuelle
@@ -470,16 +743,6 @@
               et plus spécifiquement du design responsive, visant à offrir une expérience utilisateur optimale sur des
               écrans de tailles variées.
             </p>
-          </div>
-
-
-
-        </section>
-
-        <section class="description">
-          <section class="descriptionprojets">
-            <img src="img/popupcontent/campagnemockup2.png"
-              alt="Mockup de l'affiche publicitaire et du site web format mobile">
             <p>
               Pour redéfinir entièrement l’identité visuelle du club, nous avons choisi de modifier la palette de
               couleurs initiale, vert et blanc, pour adopter une combinaison de bleu et d’orange. L’orange, faisant écho
@@ -487,48 +750,35 @@
               conception des maquettes, nous avons conservé certains éléments du site original, notamment les
               photographies de matchs et de joueurs, afin d’assurer une continuité visuelle avec l’univers existant du
               club.
-              <br>
-              <br>
-              Après avoir contribué à l’élaboration du moodboard (choix des couleurs, des visuels et des typographies),
+              <br>Après avoir contribué à l’élaboration du moodboard (choix des couleurs, des visuels et des
+              typographies),
               j’ai été en charge de la réalisation des bannières web en trois formats différents, ainsi que de la
               création de mockups adaptés aux supports ordinateur, tablette et mobile.
             </p>
-          </section>
-
-          <section class="galerie">
-            <img src="img/popupcontent/campagnepalette.png" alt="Palette de couleurs du site">
-            <img src="img/mockups/mockupcampagne.svg" alt="Mockup du site web format ordinateur">
-            <img src="img/popupcontent/campagnemes.png" alt="Mise en situation des mockups">
-          </section>
-
-          <!--<section class="descriptionprojets">
-            <p>
-              Après avoir contribué à l’élaboration du moodboard (choix des couleurs, des visuels et des typographies),
-              j’ai été en charge de la réalisation des bannières web en trois formats différents, ainsi que de la
-              création de mockups adaptés aux supports ordinateur, tablette et mobile.
-            </p>
-            <img src="img/mockups/mockupcampagne.svg" alt="Mockup du site web format ordinateur">
-          </section>--->
+          </div>
         </section>
 
-
-
-
-
+        <div class="grille-imgpopup">
+          <img src="img/popupcontent/NTR affiche.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/NTR bannières.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/NTR couleurs.png" alt="" class="imgpopup">
+          <img src="img/popupcontent/NTR SITE WEB.png" alt="" class="imgpopup">
+        </div>
 
       </section>
     </section>
 
-    <section id="projet-4" class="contenuprojets">
+    <!--DATAVIZ-->
+    <section id="projet-9" class="contenuprojets">
       <section class="contenuprojets">
 
 
         <div class="tetedescription">
-          <h2>Data Visualisation - Singing For The Stats</h2>
+          <h2>Singing For The Stats - Data Visualisation</h2>
           <h3>Dans le cadre d'un projet académique en groupe, j'ai pu réaliser un site web de Data Visualisation sur
             l’industrie musicale</h3>
-          <p>septembre 2025 - novembre 2025</p>
-          <img src="img/mockups/dataviz.jpg" alt="Page d'accueil du site web de mon Projet">
+          <p>Septembre 2025 - Novembre 2025</p>
+          <img src="img/THUMBNAIL/DATAVIZ.png" alt="Page d'accueil du site web de mon Projet">
         </div>
 
         <section class="introprojets">
@@ -556,155 +806,53 @@
             </div>
           </div>
 
-          <div class="textehaut">
+          <div class="textepopup">
             <p>
               L’objectif de ce projet est de concevoir une page web dédiée à la visualisation de données afin d’analyser
               et de présenter l’évolution d’un phénomène de manière claire, attractive et impactante. Le thème choisi
               est la musique, à travers trois axes d’analyse : l'évolution de la durée moyenne d’une chanson,
               l'évolution du nombre de featurings et l’impact de Tiktok sur l’industrie musicale. Ce sujet, universel et
               actuel, s’est imposé naturellement par sa capacité à parler à un large public.
-              Ce projet m’a permis de découvrir les principes de la datavisualisation, de concevoir des graphiques
+              <br>Ce projet m’a permis de découvrir les principes de la datavisualisation, de concevoir des graphiques
               interactifs et de travailler sur un design soigné, alliant esthétique et lisibilité de l’information, mais
               également à améliorer mes compétences en développement web front.
             </p>
-          </div>
-        </section>
-
-        <section class="description">
-          <section class="descriptionprojets">
-            <img src="img/popupcontent/datavizcouleurs.png" alt="Palette de couleurs du projet">
             <p>
-              L'esthétique du site est orienté vers un univers inspiré du studio d’enregistrement, avec des couleurs
+              L’esthétique du site est orienté vers un univers inspiré du studio d’enregistrement, avec des couleurs
               néon rappelant les logiciels de production musicale et des graphiques évoquant des éléments emblématiques
               du son (boutons de réglage de volume ou des molettes d’autotune). Nos intentions visuelles ont été
               réalisées sur une page Figma collaborative regroupant la charte graphique et les types de visualisations
               envisagées. Nous a ensuite permis de concevoir la maquette complète du site web.
-              <br>
-              <br><a
-                href="https://www.figma.com/design/doYCuKKU4q1XJF12a8JSMu/DataViz---Singing-for-the-Stats?node-id=0-1&t=UVeBhLSKKudmimXr-1"
-                class="lienfigma">Voir
-                la maquette Figma</a>
             </p>
-          </section>
-
-          <section class="descriptionprojets">
             <p>
               J’ai pris en charge la réalisation du graphique de la partie consacrée à l’impact de TikTok sur
-              l’industrie musicale. Après avoir sélectionné les données pertinentes, j’ai conçu le design du graphique
-              sur Figma, puis je l’ai développé à l’aide de <a href="https://www.chartjs.org/">Chart.js</a>, une
-              bibliothèque open source de visualisation de données en JavaScript. Le site a été développé en HTML et CSS
-              pour l’aspect visuel, en JavaScript pour les interactions et le fonctionnement des graphiques, puis
-              hébergé sur GitHub.
+              l’industrie musicale, j’ai conçu le design du graphique sur Figma, puis je l’ai développé à l’aide de
+              Chart.js, une bibliothèque open source de visualisation de données en JavaScript. Le site a été développé
+              en HTML et CSS pour l’aspect visuel, en JavaScript pour les interactions et le fonctionnement des
+              graphiques, puis hébergé sur GitHub.
             </p>
-            <img src="img/popupcontent/molette.svg" alt="Graphique en forme de molette">
-          </section>
+          </div>
         </section>
 
-
-
-
-
-
-      </section>
-    </section>
-
-    <section id="projet-5" class="contenuprojets">
-      <section class="contenuprojets">
-
-
-        <div class="tetedescription">
-          <h2>Packaging - Graphisme</h2>
-          <h3>Dans le cadre d'un projet personnel, j'ai pu réaliser des packaging de pots de glace</h3>
-          <p>septembre 2024</p>
-          <img src="img/mockups/mockup myrtille.jpg" alt="Page d'accueil de ma maquette UX / UI">
+        <div class="grille-imgpopup">
+          <img src="img/popupcontent/DATAVIZ couleurs.png" class="imgpopup" alt="Palette de couleurs du projet">
+          <img src="img/popupcontent/DATAVIZ molette.png" class="imgpopup" alt="Palette de couleurs du projet">
         </div>
 
-        <section class="introprojets">
-          <div class="zone-infos-projet">
-            <div class="carte-info">
-              <p class="titre-carte">Logiciels et outils</p>
-              <p>Photoshop, Illustrator</p>
-            </div>
-
-            <div class="carte-info">
-              <p class="titre-carte">Compétences</p>
-              <p>Graphisme</p>
-            </div>
-
-            <div class="carte-bouton">
-              <a class="btn-projet"
-                href="https://www.figma.com/design/1IY7IdejmfOynkUhcUuLY8/iScream-Packaging-Design?node-id=0-1&t=xupvvdh5H2txS7Lg-1"
-                target="_blank">
-                Voir le projet
-              </a>
-            </div>
-          </div>
-
-          <div class="textehaut">
-            <p>
-              Lors de mes premiers pas avec la suite Adobe, j'ai réalisé une étude de cas fictive autour de la marque de
-              glaces “iScream”. Ce projet m'a permis de découvrir les logiciels Photoshop et Illustrator à travers la
-              conception de packagings et de mockups. Cette expérience d'apprentissage en autonomie a consolidé ma
-              maîtrise technique des outils et a confirmé mon vif intérêt pour le design graphique.
-              <br>
-              <br>
-              Ma démarche a consisté à concevoir trois étiquettes distinctes sur Illustrator afin de décliner l'identité
-              visuelle du packaging en trois variantes correspondant à chaque saveur et d'explorer différentes palettes
-              de couleurs. L'intégration finale sur Photoshop m'a permis d'ajuster les environnements graphiques et les
-              détails du packaging (comme le coloris du couvercle) pour garantir une cohérence visuelle optimale pour
-              chaque gamme, assurant ainsi une parfaite association visuelle entre le contenant et le produit imaginé.
-            </p>
-          </div>
-
-
-
-        </section>
-
-        <!--<section class="description">
-          <section class="descriptionprojets">
-            <img src="img/popupcontent/campagnemockup2.png"
-              alt="Mockup de l'affiche publicitaire et du site web format mobile">
-            <p>
-              Pour redéfinir entièrement l’identité visuelle du club, nous avons choisi de modifier la palette de
-              couleurs initiale, vert et blanc, pour adopter une combinaison de bleu et d’orange. L’orange, faisant écho
-              au ballon de basket, a été mise en avant afin de renforcer l’identité sportive du projet. Lors de la
-              conception des maquettes, nous avons conservé certains éléments du site original, notamment les
-              photographies de matchs et de joueurs, afin d’assurer une continuité visuelle avec l’univers existant du
-              club.
-            </p>
-          </section>-->
-
-        <section class="galerie">
-          <img src="img/popupcontent/packaging glaces choco.jpg" alt="Palette de couleurs du site">
-          <img src="img/popupcontent/packaging glaces myrtille.jpg" alt="Supports de communication pour Nanterre">
-          <img src="img/popupcontent/packaging glaces noix de coco.jpg" alt="Mise en situation des mockups">
-        </section>
-
-        <!--<section class="descriptionprojets">
-            <p>
-              Ma démarche a consisté à concevoir trois étiquettes distinctes sur Illustrator afin de décliner l'identité visuelle du packaging en trois variantes correspondant à chaque saveur et d'explorer différentes palettes de couleurs. L'intégration finale sur Photoshop m'a permis d'ajuster les environnements graphiques et les détails du packaging (comme le coloris du couvercle) pour garantir une cohérence visuelle optimale pour chaque gamme, assurant ainsi une parfaite association visuelle entre le contenant et le produit imaginé.
-            </p>-->
-        <!--<img src="img/mockups/mockupcampagne.svg" alt="Mockup du site web format ordinateur">-->
-        <!--</section>-->
       </section>
-
-
-
-
-
-
     </section>
 
-    <section id="projet-6" class="contenuprojets">
+    <!--WEBINVENTORY-->
+    <section id="projet-10" class="contenuprojets">
       <section class="contenuprojets">
 
 
         <div class="tetedescription">
-          <h2>Site web inventaire - Webinventory</h2>
+          <h2>Site de destination de voyages</h2>
           <h3>Dans le cadre d'un projet académique individuel, j'ai pu développer un site web inventaire de destinations
             de voyages</h3>
-          <p>février 2025 - mai 2025</p>
-          <img src="img/mockups/webinventory.jpg" alt="Page d'accueil de mon site web WebInventory">
+          <p>Février 2025 - Mai 2025</p>
+          <img src="img/THUMBNAIL/webinventory.jpg" alt="Page d'accueil de mon site web WebInventory">
         </div>
 
         <section class="introprojets">
@@ -716,7 +864,7 @@
 
             <div class="carte-info">
               <p class="titre-carte">Compétences</p>
-              <p>Développement front et back, hébergement d’un site, Web Design</p>
+              <p>Développement front-end & back, hébergement d’un site, Web Design</p>
             </div>
 
             <div class="carte-info">
@@ -732,7 +880,7 @@
             </div>
           </div>
 
-          <div class="textehaut">
+          <div class="textepopup">
             <p>
               Dans le cadre d'un projet académique individuel, j'ai pu développer un site web dans le but de répertorier
               des éléments de notre choix. Le nom de mon site est Mappy (un mélange entre Map + Happy). Le but du projet
@@ -743,26 +891,7 @@
               utiliser une base de donnée PhpMyAdmin, mais également d’améliorer mes compétences avec les langages HTML,
               Css et JavaScript. Ce projet a été riche en défis et il illustre ma capacité à savoir utiliser les
               langages afin de développer un site web.
-              <br>
-              <br>
-               À l’aide de phpMyAdmin, j’ai créé ma base de donnée dans laquelle j’ai mis tous les informations
-              nécessaires, puis avec php j’ai intégré et connecté ma base de donnée à mon site en codant afin d’afficher
-              les éléments de ma base sur mon site web. Le JavaScript m’a servi à filtrer les pays, continents, à créer
-              des popup et les afficher, et un carrousel dans la page d’accueil.
-              J’ai également mis en place un formulaire qui permet d’ajouter une destination et à l’envoi du formulaire
-              la destination s’affiche dans la page d’accueil.
-              Ce projet a présenté de nombreux enjeux, j’ai dû m’adapter à un tout nouveau langage de code et j’ai pu
-              démontré mes compétences techniques. De nombreuses compétences en développement web ont été acquises grâce
-              à ce projet.
             </p>
-          </div>
-
-
-
-        </section>
-
-        <!--<section class="description">
-          <section class="descriptionprojets">
             <p>
               À l’aide de phpMyAdmin, j’ai créé ma base de donnée dans laquelle j’ai mis tous les informations
               nécessaires, puis avec php j’ai intégré et connecté ma base de donnée à mon site en codant afin d’afficher
@@ -770,22 +899,72 @@
               des popup et les afficher, et un carrousel dans la page d’accueil.
               J’ai également mis en place un formulaire qui permet d’ajouter une destination et à l’envoi du formulaire
               la destination s’affiche dans la page d’accueil.
-              Ce projet a présenté de nombreux enjeux, j’ai dû m’adapter à un tout nouveau langage de code et j’ai pu
+            </p>
+            <p>Ce projet a présenté de nombreux enjeux, j’ai dû m’adapter à un tout nouveau langage de code et j’ai pu
               démontré mes compétences techniques. De nombreuses compétences en développement web ont été acquises grâce
               à ce projet.
             </p>
-          </section>
+          </div>
 
-        </section>-->
-
-
-
-
+        </section>
 
 
       </section>
     </section>
 
+    <!--PACKAGING-->
+    <section id="projet-11" class="contenuprojets">
+
+      <div class="tetedescription">
+        <h2>Packaging d'un produit</h2>
+        <h3>Dans le cadre d'un projet personnel, j'ai pu réaliser des packaging de pots de glace</h3>
+        <p>Septembre 2024</p>
+        <img src="img/THUMBNAIL/PACKAGING mockup.jpg" alt="Page d'accueil de ma maquette UX / UI">
+      </div>
+
+      <section class="introprojets">
+        <div class="zone-infos-projet">
+          <div class="carte-info">
+            <p class="titre-carte">Logiciels et outils</p>
+            <p>Photoshop, Illustrator</p>
+          </div>
+
+          <div class="carte-info">
+            <p class="titre-carte">Compétences</p>
+            <p>Graphisme</p>
+          </div>
+
+          <div class="carte-bouton">
+            <a class="btn-projet"
+              href="https://www.figma.com/design/1IY7IdejmfOynkUhcUuLY8/iScream-Packaging-Design?node-id=0-1&t=xupvvdh5H2txS7Lg-1"
+              target="_blank">
+              Voir le projet
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="textepopup">
+        <p>
+          Lors de mes premiers pas avec la suite Adobe, j'ai réalisé une étude de cas fictive autour de la marque de
+          glaces "iScream". Ce projet m'a permis de découvrir les logiciels Photoshop et Illustrator à travers la
+          conception de packagings et de mockups. Cette expérience d'apprentissage en autonomie a consolidé ma
+          maîtrise technique des outils et a confirmé mon vif intérêt pour le design graphique.
+        </p>
+        <p>
+          Ma démarche a consisté à concevoir trois étiquettes distinctes sur Illustrator afin de décliner l'identité
+          visuelle du packaging en trois variantes correspondant à chaque saveur et d'explorer différentes palettes
+          de couleurs. L'intégration finale sur Photoshop m'a permis d'ajuster les environnements graphiques et les
+          détails du packaging (comme le coloris du couvercle) pour garantir une cohérence visuelle optimale pour
+          chaque gamme, assurant ainsi une parfaite association visuelle entre le contenant et le produit imaginé.
+        </p>
+      </div>
+
+      <div class="grille-imgpopup">
+        <img src="img/popupcontent/PACKAGING glaces choco.jpg" class="imgpopup" alt="Packaging choco">
+        <img src="img/popupcontent/PACKAGING glaces myrtille.jpg" class="imgpopup" alt="Packaging myrtille">
+        <img src="img/popupcontent/PACKAGING glaces noix de coco.jpg" class="imgpopup" alt="Packaging noix de coco">
+      </div>
 
     </section>
   </div>
@@ -803,7 +982,7 @@
       <div class="reco">
         <h2>Amal</h2>
         <h3>Étudiante en BUT MMI</h3>
-        <p>Projets : Court Metrage, Refonte web et DataViz</p>
+        <p>Projets : Court Metrage, Nanterre 92 et DataViz</p>
         <div class="textReco">
           <p>
             Kelly étant mon binôme depuis 1 an et demi, j'ai pu travailler avec elle sur ce nombreux projets. Créative
