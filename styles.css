@@ -814,9 +814,8 @@ footer a {
 
 .tetedescription img {
   width: 700px;
-  border-radius: 15px;
-  /*border: 2px solid #541507;*/
-  box-shadow: 10px 10px 0px #541507;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .descriptionprojets img {
@@ -1065,6 +1064,14 @@ footer img {
 }
 
 
+.carte video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
 
 
 
@@ -1076,67 +1083,135 @@ footer img {
 
 
 /* --- responsive --- */
-/* --- RESPONSIVE : TABLETTES (jusqu'à 1024px) --- */
+
+/* ================================================
+   TABLETTES (jusqu'à 1024px)
+   ================================================ */
 @media (max-width: 1024px) {
 
-  .body {
-    max-width: 1024px;
-    font-family: 'Archivo', sans-serif;
+  /* Textes alignés à gauche partout */
+  p,
+  h2,
+  h3,
+  li,
+  span {
+    text-align: left !important;
+    text-justify: none !important;
   }
 
   .presentation {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: 60px 20px;
   }
 
   .liste-projets {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes sur tablette */
     gap: 40px;
   }
 
   .descriptionprojets {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 30px;
   }
 
   .descriptionprojets img {
-    width: 80%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
 
-/* --- RESPONSIVE : MOBILES (jusqu'à 768px) --- */
-/*/////////////////////////////////////////////*/
+/* ================================================
+   MOBILES (jusqu'à 768px)
+   ================================================ */
 @media (max-width: 768px) {
+
+  /* Textes alignés à gauche partout */
+  p,
+  h2,
+  h3,
+  li,
+  span,
+  .popup p,
+  .popup h2,
+  .popup h3,
+  .textepopup p,
+  .tetedescription p,
+  .tetedescription h2,
+  .tetedescription h3,
+  .introprojets,
+  .descriptionprojets,
+  .presentation p,
+  .presentation h2,
+  .presentation h3 {
+    text-align: left !important;
+    text-justify: none !important;
+  }
+
+  /* Header */
   header {
     padding: 10px 0;
   }
 
-  /* Navigation simplifiée pour mobile */
+  /* Menu burger */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
   .menu {
     flex-direction: column;
     gap: 10px;
     padding: 12px 15px;
     border-radius: 25px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .menu ul {
-    gap: 12px;
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(255, 244, 244);
+    border-left: 2px solid #541507;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+  }
+
+  .menu ul.active {
+    right: 0;
+  }
+
+  .menu ul li a {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .menu a {
     font-size: 0.85rem;
   }
 
-  /* Sections */
+  /* Bannière */
   .banniere {
     font-size: 3.3rem;
-    /* Réduction pour éviter que le mot dépasse */
     padding: 120px 10px;
   }
 
@@ -1145,15 +1220,22 @@ footer img {
     padding: 0 5px;
   }
 
+  /* Présentation */
+  .presentation {
+    flex-direction: column;
+    text-align: left;
+    padding: 40px 15px;
+  }
+
   .photoMoi {
     width: 80%;
     max-width: 280px;
     transform: none;
-    /* On enlève la rotation sur mobile pour gagner de la place */
   }
 
   .presentation p {
-    padding: 0 10px
+    padding: 0;
+    text-align: left;
   }
 
   /* Logiciels */
@@ -1167,22 +1249,33 @@ footer img {
     width: 45px;
   }
 
-  /* Projets */
+  /* Grille projets */
   .liste-projets {
     grid-template-columns: 1fr;
-    /* 1 seule colonne sur mobile */
     gap: 60px;
   }
 
-  .projet .carte,
-  .carte img {
+  /* Cartes projets — pas de déformation */
+  .projet .carte {
     width: 100%;
-    max-width: 260px;
+    max-width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
   }
 
-  /* Popup et Contenu Projets */
+  .projet .carte img,
+  .projet .carte video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Textes sous les cartes */
+  .projet {
+    align-items: flex-start;
+  }
+
+  /* Popup */
   .popup {
     width: 92%;
     padding: 15px;
@@ -1196,28 +1289,58 @@ footer img {
     position: absolute;
   }
 
+  /* Image principale popup */
   .tetedescription img {
     width: 100%;
-    box-shadow: 5px 5px 0px #541507;
+    height: auto;
+    object-fit: cover;
+    box-shadow: none;
   }
 
+  /* Infos projet */
   .introprojets,
   .descriptionprojets {
     flex-direction: column;
-    padding: 30px 15px;
+    padding: 20px 0;
     gap: 25px;
-    text-align: center;
+    text-align: left;
   }
 
   .zone-infos-projet {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
   .carte-info {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
+  }
+
+  /* Images et vidéos dans les popups — pas de déformation */
+  .imgpopup,
+  .grille-imgpopup .imgpopup {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .grille-imgpopup {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .video-wrapper,
+  .video-wrapper--large {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .video-wrapper video,
+  .video-wrapper--large video {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
   }
 
   .galerie {
@@ -1228,12 +1351,21 @@ footer img {
   .galerie img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 
-  .video-wrapper,
-  .video-wrapper video {
-    width: 100% !important;
-    height: auto;
+  /* Navigation popup */
+  .popup-navigation {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .popup-navigation button {
+    width: 48%;
+    font-size: 0.8rem;
+    padding: 10px 5px;
   }
 
   /* Recommandations */
@@ -1249,13 +1381,13 @@ footer img {
     width: 100%;
     height: auto;
     padding: 25px 15px;
-    box-shadow: 7px 7px 0px #541507;
+    box-shadow: none;
   }
 
   /* Footer */
   #footer .contacts {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 25px;
   }
 
@@ -1266,73 +1398,16 @@ footer img {
   .contact-item {
     flex-direction: column;
     gap: 15px;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  /* Boutons de navigation popup */
-  .popup-navigation {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
+  /* Exceptions : éléments qui restent centrés sur mobile */
+  @media (max-width: 1024px) {
+
+    .sous-titre,
+    .crea h2,
+    .dev h2 {
+      text-align: center !important;
+    }
   }
-
-  .popup-navigation button {
-    width: 48%;
-    font-size: 0.8rem;
-    padding: 10px 5px;
-  }
-
-  .hamburger {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-  }
-
-  .menu {
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .menu ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    /* Totalement caché à droite au départ */
-    width: 250px;
-    /* Largeur du tiroir */
-    height: 100vh;
-    background-color: rgb(255, 244, 244);
-    border-left: 2px solid #541507;
-    flex-direction: column;
-    justify-content: center;
-    /* Centre les liens verticalement */
-    align-items: center;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    /* Animation fluide */
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
-    z-index: 1050;
-  }
-
-  /* État ouvert du menu */
-  .menu ul.active {
-    right: 0;
-    /* Glisse vers l'intérieur de l'écran */
-  }
-
-  .menu ul li a {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-
-
 }
